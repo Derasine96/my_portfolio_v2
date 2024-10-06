@@ -9,7 +9,7 @@ const inter = Inter({
   variable: "--font-sans",
 });
 
-const calistoga = Roboto_Slab({
+const robotoSlab = Roboto_Slab({
   subsets: ["latin"],
   variable: "--font-serif",
   weight: "700",
@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={twMerge(
           inter.variable,
-          calistoga.variable,
+          robotoSlab.variable,
           "text-white antialiased font-sans relative"
         )}
         style={{
