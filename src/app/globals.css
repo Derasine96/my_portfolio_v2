@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .hero-ring {
+        @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-primary-foreground/10 shadow-[0_0_80px_inset] shadow-primary-foreground/10;
+      }
+
+    .bg-gradient {
+        @apply bg-gradient-to-br from-[#f84471] to-primary-foreground;
+    }
+
+    .icon-style {
+        @apply border rounded-full p-1 border-primary-foreground;
+    }
+}
