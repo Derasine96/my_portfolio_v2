@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "^5.7.3",
     "@svgr/webpack": "^8.1.0",
     "autoprefixer": "^10.4.20",
     "framer-motion": "^11.3.21",
