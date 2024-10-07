@@ -26,7 +26,7 @@ function ContactForm() {
 
   return (
     <div className="w-full max-w-2xl mx-auto">
-      <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+      <form onSubmit={handleSubmit} className="flex flex-col space-y-4" name="contact" data-netlify="true">
         <div className="flex space-x-4">
           <input
             type="text"
