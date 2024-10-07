@@ -38,10 +38,6 @@ const nextConfig = {
       }
     );
 
-    config.eslint = {
-      ignoreDuringBuilds: true,
-    };
-
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
     fileLoaderRule.exclude = /\.svg$/i;
 
