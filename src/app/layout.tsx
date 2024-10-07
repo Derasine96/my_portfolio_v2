@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter, Roboto_Slab } from "next/font/google";
+// import { Inter, Roboto_Slab } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 import backgroundImage from "@/assets/images/background.jpg";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+// const inter = Inter({
+//   subsets: ["latin"],
+//   variable: "--font-sans",
+// });
 
-const robotoSlab = Roboto_Slab({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  weight: "700",
-});
+// const robotoSlab = Roboto_Slab({
+//   subsets: ["latin"],
+//   variable: "--font-serif",
+//   weight: "700",
+// });
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -29,9 +29,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={twMerge(
-          inter.variable,
-          robotoSlab.variable,
-          "text-white antialiased font-sans relative"
+          // inter.variable,
+          // robotoSlab.variable,
+          "text-white antialiased relative font-inter"
         )}
         style={{
           backgroundImage: `url(${backgroundImage.src})`,

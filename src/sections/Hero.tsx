@@ -24,10 +24,10 @@ export const HeroSection = () => {
           </div>
         </div>
         <div className="max-w-lg mx-auto">
-          <h1 className="font-serif font-black text-4xl md:text-5xl lg:text-6xl text-center text-primary-brightCoral mt-8 bg-gradient-to-r from-red-400 to-primary-lightRed text-transparent bg-clip-text">
+          <h1 className="font-calistoga font-black text-4xl md:text-5xl lg:text-6xl text-center text-primary-brightCoral mt-8 bg-gradient-to-r from-red-400 to-primary-lightRed text-transparent bg-clip-text tracking-wider">
             HEY THERE!, IT’S CHIDERA{" "}
           </h1>
-          <h2 className="font-serif text-primary-offWhite text-xl md:text-4xl text-center tracking-tighter">
+          <h2 className="font-calistoga text-primary-offWhite text-xl md:text-4xl text-center tracking-tighter">
             Bringing Ideas to Life with Code and Creativity
           </h2>
           <p className="flex flex-col gap-1.5 mt-2 text-sm md:text-lg text-center text-primary-offWhite">

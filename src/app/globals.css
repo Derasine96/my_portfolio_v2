@@ -3,15 +3,41 @@
 @tailwind utilities;
 
 @layer components {
-    .hero-ring {
-        @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-primary-foreground/10 shadow-[0_0_80px_inset] shadow-primary-foreground/10;
-      }
+  .hero-ring {
+    @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-primary-foreground/10 shadow-[0_0_80px_inset] shadow-primary-foreground/10;
+  }
 
-    .bg-gradient {
-        @apply bg-gradient-to-br from-[#f84471] to-primary-foreground;
-    }
+  .bg-gradient {
+    @apply bg-gradient-to-br from-[#f84471] to-primary-foreground;
+  }
 
-    .icon-style {
-        @apply border rounded-full p-1 border-primary-foreground;
-    }
+  .icon-style {
+    @apply border rounded-full p-1 border-primary-foreground;
+  }
+}
+
+/* inter-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/inter-v18-latin-regular.woff2") format("woff2");
+}
+/* inter-900 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/inter-v18-latin-900.woff2") format("woff2");
+}
+
+/* calistoga-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Calistoga";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/calistoga-v16-latin-regular.woff2") format("woff2");
 }

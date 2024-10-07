@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-import { color } from "framer-motion";
 
 module.exports = {
   content: [
@@ -23,9 +22,13 @@ module.exports = {
       },
     },
     extend: {
+      // fontFamily: {
+      //   sans: "var(--font-sans)",
+      //   serif: "var(--font-serif)", 
+      // },
       fontFamily: {
-        sans: "var(--font-sans)",
-        serif: "var(--font-serif)", 
+        inter: ['Inter', 'sans-serif'],
+        calistoga: ['Calistoga', 'cursive'],
       },
       colors: {
         primary: {
