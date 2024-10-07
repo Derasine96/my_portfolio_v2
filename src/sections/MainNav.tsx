@@ -9,14 +9,17 @@ const navLinks = [
   {
     title: "Home",
     href: "/",
+    scrollTo: "home",
   },
   {
-    title: "About me",
+    title: "About Me",
     href: "/about",
+    scrollTo: "about",
   },
   {
     title: "Portfolio",
     href: "/portfolio",
+    scrollTo: "projects",
   },
   {
     title: "Testimonials",
@@ -29,6 +32,7 @@ const navLinks = [
   {
     title: "Contact",
     href: "/contact",
+    scrollTo: "contact",
   },
 ];
 
@@ -42,6 +46,13 @@ export const MainNav = () => {
       document.body.style.overflow = "auto";
     }
   }, [isOpen]);
+
+  const scrollToSection = (sectionId: any) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -59,11 +70,19 @@ export const MainNav = () => {
               <div className="flex gap-8 lg:gap-16">
                 {/* NAVIGATION LINKS */}
                 <nav className="hidden md:flex items-center gap-3 lg:gap-5">
-                  {navLinks.map(({ title, href }) => (
+                  {navLinks.map(({ title, href, scrollTo }) => (
                     <a
                       key={title}
                       href={href}
                       className="text-primary-brightCoral font-medium font-sans text-xs lg:text-base tracking-tighter"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (scrollTo) {
+                          scrollToSection(scrollTo);
+                        } else {
+                          window.location.href = href;
+                        }
+                      }}
                     >
                       {title}
                     </a>
@@ -112,7 +131,7 @@ export const MainNav = () => {
             <div className="absolute inset-2 rounded-md bg-primary-lightRed/50 mt-24 z-0">
               <div className="flex h-full justify-center items-center">
                 <nav className="flex flex-col items-center gap-12">
-                  {navLinks.map(({ title, href }, index) => (
+                  {navLinks.map(({ title, href, scrollTo }, index) => (
                     <motion.a
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -123,6 +142,14 @@ export const MainNav = () => {
                       }}
                       key={title}
                       href={href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (scrollTo) {
+                          scrollToSection(scrollTo);
+                        } else {
+                          window.location.href = href;
+                        }
+                      }}
                     >
                       <span className="text-base font-sans tracking-tight text-primary-brightCoral hover:text-primary-orangeBrown transition duration-300">
                         {title}
