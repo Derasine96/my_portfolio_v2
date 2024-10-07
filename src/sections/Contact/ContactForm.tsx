@@ -3,7 +3,6 @@
 import { CutCornerButton } from "@/components/CutCornerButton";
 import React from "react";
 import { useState } from "react";
-import { LuSend } from "react-icons/lu";
 
 function ContactForm() {
   const [formValues, setFormValues] = useState({
@@ -27,7 +26,7 @@ function ContactForm() {
 
   return (
     <div className="w-full max-w-2xl mx-auto">
-      <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+      <form onSubmit={handleSubmit} className="flex flex-col space-y-4" name="contact" method="POST" data-netlify="true">
         <div className="flex space-x-4">
           <input
             type="text"
