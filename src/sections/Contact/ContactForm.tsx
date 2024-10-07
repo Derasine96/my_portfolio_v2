@@ -22,6 +22,7 @@ function ContactForm() {
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
+    console.log("Form submitted", formValues);
   };
 
   return (
@@ -60,7 +61,7 @@ function ContactForm() {
           placeholder="YOUR MESSAGE"
           className="w-full bg-transparent border border-primary-lightBeige/50 text-offWhite rounded-2xl lg:px-10 md:px-6 sm:px-6 py-4 placeholder-primary-offWhite/40 placeholder:text-xs placeholder:font-sans resize-none h-56"></textarea>
         <div className="relative inline-block">
-          <CutCornerButton className="lg:px-4 py-2">Send Message</CutCornerButton>
+          <CutCornerButton type="submit" className="lg:px-4 py-2">Send Message</CutCornerButton>
         </div>
       </form>
     </div>

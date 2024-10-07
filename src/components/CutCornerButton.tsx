@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 export const CutCornerButton = (props: ComponentPropsWithoutRef<'button'>) => {
     const { children, className } = props;
   return (
-    <button type="submit" className={twMerge("relative bg-primary-foreground/10 px-3 py-1 font-semibold font-heading text-sm tracking-wide", className)}>
+    <button type="submit" className={twMerge("relative bg-primary-foreground/10 px-3 py-1 font-semibold font-heading text-sm tracking-wide cursor-pointer", className)}>
       <div className="absolute inset-0 outline outline-2 -outline-offset-2 outline-primary-foreground [mask-image:linear-gradient(225deg,transparent,transparent_10px,black_10px)]"></div>
       <svg
         width="24"
